@@ -1,0 +1,29 @@
+[
+	{
+		"diet": "1500",
+		"meal1": {
+			"porridge": 100,
+			"yogurt": 100,
+			"fruits": 100,
+			"nuts": 20
+		},
+		"meal2": {
+			"chicken": 100,
+			"rice": 50,
+			"vegetables": 200
+		},
+		"meal3": {
+			"chicken": 100,
+			"potato": 150,
+			"vegetables": 200
+		},
+		"meal4": {
+			"banana": 1
+		},
+		"meal5": {
+			"quark": 80,
+			"nuts": 10,
+			"fruits": 100
+		}
+	}
+]

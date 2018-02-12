@@ -48,7 +48,7 @@ include 'inc/sessions.php';
             <i class="far fa-thumbs-up"></i>
           </div>
         </section>
-        
+        <!-- END OF NAV/BUTTONS TOP MOBILE -->
         
         
         <!-- SECONDARY NAV/BUTTONS GENERATORS MD AND MORE -->
@@ -58,7 +58,7 @@ include 'inc/sessions.php';
             <i class="fas fa-calculator"></i>
           </div>
 
-          <div class="nav-left-button-container" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Diet list">
+          <div class="nav-left-button-container diet-button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Diet list">
             <!--diet list-->
             <i class="fas fa-list-ol"></i>
           </div>
@@ -68,7 +68,7 @@ include 'inc/sessions.php';
             <i class="far fa-thumbs-up"></i>
           </div>
         </section>
-
+		<!-- END OF NAV/BUTTONS	LEFT ON MD AND MORE -->
 
 
         <!-- MAIN CONTENT  -->

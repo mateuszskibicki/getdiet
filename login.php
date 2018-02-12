@@ -1,4 +1,3 @@
-
 <?php
 
 // If isset session >> redirect to home page
@@ -71,40 +70,40 @@ include 'inc/header.php';
 
 ?>
 
-  <section id="login">
-    <div class="row">
-      <div class="col-12 col-lg-6 left-login m-auto">
-        <form action="login.php" method="POST" class="p-3 pb-0 col-12">
-          <div class="row">
-            <?php if(isset($alert)){echo $alert;}; ?>
-            <h1 class="col-12 text-center display-4 mb-2">Login to GetDiet</h1>
-            <div class="col-12 col-md-8 form-group m-auto">
-              <label for="username">Username</label>
-              <input class="form-control" type="text" placeholder="Username" id="username" name="username">
-              <!--USERNAME-->
-            </div>
-            <div class="col-12 col-md-8 form-group m-auto">
-              <label for="password">Password</label>
-              <input class="form-control" type="password" placeholder="Password" id="password" name="password">
-              <!--PASSWORD-->
-            </div>
-            <div class="col-12 text-center mt-3">
-              <input type="submit" value="Login" name="login" class="btn btn-lg btn-login">
-            </div>
-            <div class="col-12 text-center mt-3">
-              <p class="lead">Don't have an account? Register for free!</p>
-            </div>
-          </div>
-        </form>
-        <div class="col-12 text-center mt-0 pb-3">
-          <a href="register.php"><button class="btn btn-lg btn-login">REGISTER</button></a>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6 right-login">
-        <img class="img-fluid" src="img/screens.png" alt="">
-      </div>
-    </div>
-  </section>
+<section id="login">
+	<div class="row">
+		<div class="col-12 col-lg-6 left-login m-auto">
+			<form action="login.php" method="POST" class="p-3 pb-0 col-12">
+				<div class="row">
+					<?php if(isset($alert)){echo $alert;}; ?>
+					<h1 class="col-12 text-center display-4 mb-2">Login to GetDiet</h1>
+					<div class="col-12 col-md-8 form-group m-auto">
+						<label for="username">Username</label>
+						<input class="form-control" type="text" placeholder="Username" id="username" name="username">
+						<!--USERNAME-->
+					</div>
+					<div class="col-12 col-md-8 form-group m-auto">
+						<label for="password">Password</label>
+						<input class="form-control" type="password" placeholder="Password" id="password" name="password">
+						<!--PASSWORD-->
+					</div>
+					<div class="col-12 text-center mt-3">
+						<input type="submit" value="Login" name="login" class="btn btn-lg btn-login">
+					</div>
+					<div class="col-12 text-center mt-3">
+						<p class="lead">Don't have an account? Register for free!</p>
+					</div>
+				</div>
+			</form>
+			<div class="col-12 text-center mt-0 pb-3">
+				<a href="register.php"><button class="btn btn-lg btn-login">REGISTER</button></a>
+			</div>
+		</div>
+		<div class="col-12 col-lg-6 right-login">
+			<img class="img-fluid" src="img/screens.png" alt="">
+		</div>
+	</div>
+</section>
 
 
-  <?php include 'inc/footer.php' ?>
+<?php include 'inc/footer.php' ?>

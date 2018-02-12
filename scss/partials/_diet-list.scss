@@ -1,0 +1,19 @@
+#diet-list {
+	font-family: $font-raleway;
+	#diet-list-select {
+		max-width: 800px;
+	}
+	#placeForDiet {
+		max-width: 800px;
+	}
+	.list-group-item {
+		padding: 4px;
+		@include media-md {
+			padding: 6px;
+			font-size: 1.2em;
+		}
+		@include media-lg {
+			font-size: 1.4em;
+		}
+	}
+}
