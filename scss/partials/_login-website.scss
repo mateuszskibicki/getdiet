@@ -1,0 +1,154 @@
+#welcome-left {
+  height: 50vh;
+  @include flex-center;
+  font-size: 1.5em;
+  color: $whitesmoke;
+  font-weight: 400;
+  font-family: $font-condense;
+  background: #76b852;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #8DC26F, #76b852);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  img {
+    height: 1em;
+  }
+  svg {
+    margin-right: 10px;
+  }
+  p {
+    padding: 1px;
+    margin: 0px;
+    transition: 0.5s;
+  }
+  @include media-sm {
+    height: 100vh;
+  }
+  @include media-md {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  @include media-lg {
+    font-size: 2.5em;
+  }
+}
+
+#welcome-right {
+  height: 50vh;
+  font-family: $font-anton;
+  color: $text-color;
+  background: url('../img/login-right.jpg');
+  background-position: center;
+  background-size: auto;
+  @include flex-center;
+  p {
+    font-size: 1.8em;
+    color: rgba($text-color, 0.9);
+    @include media-md {
+      font-size: 3em;
+    }
+    @include media-lg {
+      font-size: 4em;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  .btn {
+    font-size: 1.5em;
+    //font-weight: 700;
+    letter-spacing: 3px;
+    margin: 5px;
+    border-radius: 0px;
+    border: 1px $green-light solid;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include media-md {
+      font-size: 2em;
+      margin: 9px;
+    }
+    @include media-lg {
+      font-size: 2.8em;
+    }
+  }
+  .btn-register {
+    color: $green-light;
+    background-color: rgba($whitesmoke, 1);
+    box-shadow: -0px 5px 5px rgba(#808080, 0.5);
+  }
+  .btn-login {
+    color: $whitesmoke;
+    background-color: rgba($green-light, 1);
+    box-shadow: -0px 5px 5px rgba(#808080, 0.5);
+  }
+  @include media-sm {
+    height: 100vh;
+  }
+}
+
+#login {
+  background: #76b852;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, lighten(#8DC26F, 20%), lighten(#76b852, 20%));
+  background: linear-gradient(to right, lighten(#8DC26F, 20%), lighten(#76b852, 20%));
+  min-height: 100vh;
+  font-family: $font-raleway;
+  color: $text-color;
+  @include flex-center;
+  font-size: 0.9em;
+  h1 {
+    font-size: 3em;
+  }
+  input {}
+  .btn-login {
+    background: #76b852;
+    color: $whitesmoke;
+    font-size: 1.5em;
+    text-align: center;
+    box-shadow: 2px 2px 4px gray;
+    transition: 0.3s;
+    &:hover {
+      background: darken(#76b852, 30%);
+    }
+    @include media-md {
+      margin: 6px;
+      font-size: 1.8em;
+    }
+  }
+  .right-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#register {
+  background: #76b852;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, lighten(#8DC26F, 20%), lighten(#76b852, 20%));
+  background: linear-gradient(to right, lighten(#8DC26F, 20%), lighten(#76b852, 20%));
+  font-family: $font-raleway;
+  padding: 10px;
+  min-height: 100vh;
+  @include flex-center;
+  p {
+    font-size: 2em;
+  }
+  .btn-register {
+    background: #76b852;
+    color: $whitesmoke;
+    font-size: 1.5em;
+    text-align: center;
+    box-shadow: 2px 2px 4px gray;
+    transition: 0.3s;
+    &:hover {
+      background: darken(#76b852, 30%);
+    }
+    @include media-md {
+      margin: 6px;
+      font-size: 1.8em;
+    }
+  }
+}

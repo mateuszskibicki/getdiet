@@ -1,0 +1,198 @@
+//-----------------------------------------
+//###### HOME MAIN
+//-----------------------------------------
+#home {
+  font-family: $font-condense;
+  color: $text-color;
+  margin: auto;
+}
+
+//-----------------------------------------
+//###### NAV TOP
+//-----------------------------------------
+#nav-top {
+  background: #76b852;
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  background: linear-gradient(to right, #8DC26F, #76b852);
+  height: 58px;
+  box-shadow: 0px 2px 5px gray;
+  max-width: 1900px;
+  position: fixed;
+  z-index: 1000;
+  nav {
+    letter-spacing: 2px;
+    background-color: none;
+    color: $whitesmoke;
+    padding: 0px;
+  }
+  a {
+    color: $whitesmoke;
+    font-size: 2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.1) translateX(10px);
+    }
+  }
+  #logo-carrot {
+    width: 50px;
+  }
+  svg {
+    font-size: 1.5em;
+    @include media-md {
+      font-size: 2em;
+    }
+  }
+  .nav-top-button-container {
+    @include flex-center;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    @include media-md {
+      margin-left: 25px;
+    }
+  }
+}
+
+//-----------------------------------------
+//###### NAV SECONDARY
+//-----------------------------------------
+#nav-top-secondary {
+  width: 100%;
+  margin-top: 62px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  cursor: pointer;
+  .nav-left-button-container {
+    background: #76b852;
+    color: $whitesmoke;
+    font-size: 1.7em;
+    text-align: center;
+    margin: 4px;
+    width: 100%;
+    box-shadow: 2px 2px 4px gray;
+    transition: 0.3s;
+    &:hover {
+      background: darken(#76b852, 30%);
+    }
+    @include media-md {
+      margin: 6px;
+      font-size: 1.8em;
+    }
+  }
+}
+
+.nav-top-secondary-md {
+  position: fixed;
+  top: 0px;
+  width: auto;
+  @include media-xl {
+    max-width: 200px;
+  }
+}
+
+//-----------------------------------------
+//###### MAIN CONTENT
+//-----------------------------------------
+#main-content {
+  padding: 3px;
+  background-color: $whitesmoke;
+  color: $text-color;
+  .welcome-message {
+    .jumbotron {
+      padding-bottom: 50px;
+/*      background-image: url('../img/home-pattern.png');
+      background-repeat: repeat;
+      background-size: auto;
+      background-position: center;*/
+    }
+    #main-content-welcome-info {
+      h1 {
+        font-size: 2.5em;
+        @include media-sm {
+          font-size: 4em;
+        }
+        @include media-md {
+          font-size: 5em;
+        }
+      }
+      p {
+        font-size: 1.5em;
+        font-weight: 400;
+        @include media-sm {
+          font-size: 2em;
+        }
+        @include media-lg {
+          font-size: 2.8em;
+        }
+      }
+    }
+  }
+}
+
+//-----------------------------------------
+//###### POPOVER BODY
+//-----------------------------------------
+.popover-body {
+  color: $text-color;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+//-----------------------------------------
+//###### FOOTER
+//-----------------------------------------
+#footer {
+  height: 130px;
+  width: 100%;
+  /*  background: #76b852;
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  background: linear-gradient(to top, #8DC26F, #76b852);
+  box-shadow: 0px -2px 6px gray;*/
+  font-size: 1em;
+  color: $whitesmoke;
+  background-color: $text-color;
+  max-width: 1900px;
+  position: fixed;
+  bottom: -130px;
+  a {
+    color: $whitesmoke;
+  }
+  p {
+    margin: 5px;
+    font-weight: 400;
+  }
+  img {
+    width: 30px;
+  }
+  svg {
+    font-size: 2em;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+  }
+  #footer-button {
+    width: 42px;
+    height: 42px;
+    background-color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 0px;
+    cursor: pointer;
+    .button-rotate {
+      transform: rotate(180deg);
+    }
+    @include media-xl {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}

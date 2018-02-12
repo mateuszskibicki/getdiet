@@ -1,0 +1,29 @@
+#profile-page {
+  font-family: $font-raleway;
+  .profile-page-top-info {
+    font-size: 2em;
+    @include media-md {
+      font-size: 3em;
+    }
+  }
+  .profile-info-list {
+    max-width: 700px;
+    @include media-md {
+      font-size: 1.5em;
+    }
+  }
+  .profile-update-button {
+    background: #76b852;
+    color: $whitesmoke;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 2px 2px 4px gray;
+    transition: 0.3s;
+    &:hover {
+      background: darken(#76b852, 30%);
+    }
+  }
+  @include media-md {
+    margin-top: 60px;
+  }
+}
