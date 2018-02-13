@@ -63,7 +63,7 @@ include 'inc/sessions.php';
             <i class="fas fa-list-ol"></i>
           </div>
 
-          <div class="nav-left-button-container" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Recommended sites">
+          <div class="nav-left-button-container recommended-button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Recommended sites">
             <!--recommended links-->
             <i class="far fa-thumbs-up"></i>
           </div>

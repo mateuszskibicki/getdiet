@@ -9,22 +9,13 @@ if (isset($_SESSION["username"])) {
 }
 
 if ($_POST) {
-    $host = "localhost";
-    $user = "root";
-    $password = "root";
-    $dbname = "getdiet";
-    $dsn = 'mysql:host=' . $host . ';dbname=' . $dbname;
     try {
-        $pdo = new PDO($dsn, $user, $password);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); //wole assoc niz obj
-
+		include('inc/conf.php');
         // USERNAME AND PASSWORD FROM FORM
-
         $username = $_POST['username'];
         $password = $_POST['password'];
 
         // WE ARE LOOKING FOR USERNAME IN DB
-
         $sql = 'SELECT * FROM userinfo WHERE username = "' . $username . '"';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();

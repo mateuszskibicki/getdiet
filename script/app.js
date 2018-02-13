@@ -95,4 +95,5 @@ ajaxAndScroll('.calc-button', 'ajax/calc.php');
 // DIET AJAX
 ajaxAndScroll('.diet-button', 'ajax/diet.php');
 
-
+// TIPS AND RECOMMENDED
+ajaxAndScroll('.recommended-button', 'ajax/tips.php');

@@ -322,9 +322,6 @@ body {
     @media (min-width: 768px) {
       #calc-bmi p {
         font-size: 1.5em; } }
-    @media (min-width: 992px) {
-      #calc-bmi p {
-        font-size: 2em; } }
   #calc-bmi .text-stronger {
     font-size: 1em;
     font-weight: 700; }
@@ -333,9 +330,6 @@ body {
     @media (min-width: 768px) {
       #calc-bmi ul {
         font-size: 1.5em; } }
-    @media (min-width: 992px) {
-      #calc-bmi ul {
-        font-size: 2em; } }
 
 #profile-page {
   font-family: "Raleway", sans-serif; }
@@ -377,5 +371,29 @@ body {
     @media (min-width: 992px) {
       #diet-list .list-group-item {
         font-size: 1.4em; } }
+  #diet-list p {
+    font-size: 1em; }
+    @media (min-width: 576px) {
+      #diet-list p {
+        font-size: 1.3em; } }
+    @media (min-width: 768px) {
+      #diet-list p {
+        font-size: 1.5em; } }
+
+#tips {
+  font-family: "Raleway", sans-serif; }
+  #tips .btn-link {
+    background: #76b852;
+    color: #f5f5f5;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 2px 2px 4px gray;
+    transition: 0.3s; }
+    #tips .btn-link:hover {
+      background: #325021; }
+
+.modal p {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1em; }
 
 /*# sourceMappingURL=style.css.map */

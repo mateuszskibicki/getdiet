@@ -16,11 +16,11 @@ $daily_kcal = round($rmr * $user_activity);
 <section id="diet-list">
 	<div class="jumbotron jumbotron-fluid mb-0">
 		<div class="container">
-			<h1>You need:</h1>
+			<p class="lead"><strong class="font-weight-bold">To loose your weight you have to subtract 200/300 kcal from your daily BMR. To gain weight you have to add 200/300 kcal.</strong></p>
 			<p class="lead">
 				<strong class="font-weight-bold"><?php echo $daily_kcal ?></strong> kcal daily to keep weight</p>
 			<p class="lead">
-				<strong class="font-weight-bold"><?php echo $daily_kcal-200 ?></strong> kcal daily to loose weight</p>
+				<strong class="font-weight-bold"><?php echo $daily_kcal-200 ?></strong> kcal daily to lose weight</p>
 			<p class="lead">
 				<strong class="font-weight-bold"><?php echo $daily_kcal+200 ?></strong> kcal daily to gain weight</p>
 			<select class="form-control" id="diet-list-select">
@@ -30,13 +30,34 @@ $daily_kcal = round($rmr * $user_activity);
 			 	<?php endfor; ?>
 			</select>
 			<div id="placeForDiet" class="mt-1">
-				<h1>This is place for your diet. Choose calories and read. Below diet you'll find all ideas how to change products and make your diet uniqe and personal.</h1>
+				<h4>This is place for your diet. Below diet you'll find all ideas how to replace products and make your diet uniqe and personal. Remember I am not professional dietician, this is just ideas how to start eating healthy. </h4>
+			</div>
+			<div id="placeForAlternatives">
+				<h3 class="mt-2">Alternatives : </h3>
+				<p class="lead"><strong class="font-weight-bold">Breakast</strong></p>
+				<p class="lead">
+					Porridge oats : wholemeal bread / rice / pasta / quinoa<br> Yogurt : ham / meat / quark / cheese / milk / eggs<br> Fruits : banana / strawberries / kiwi / pomeolo / grapefruit / fresh 100% juice<br> Nuts : flas seeds / almonds / chia seeds / walnuts / avocado
+				</p>
+				<p class="lead"><strong class="font-weight-bold">Meals before and after training</strong></p>
+				<p class="lead">
+					Chicken : lamb / beef / fish / turkey / pork / eggs<br> Brown rice : boiled potatoes / wholemeal pasta / wholemeal bread / quinoa<br> Vegetables : salads without sauce / cabbage / lettuce / pepper / red kidney beans / spinach / cauliflower / broccoli etc.
+				</p>
+				<p class="lead"><strong class="font-weight-bold">Snacks / fruits</strong></p>
+				<p class="lead">
+					Banana is good but you can find some other healthy snacks like fruits, salads, avocado.
+				</p>
+				<p class="lead"><strong class="font-weight-bold">Dinner - last meal</strong></p>
+				<p class="lead">
+					Nothing big, mostly proteins and fats. Cheese, meat, salads with chicken or small sandwich with meat and vegetables. Do not eat to much sugar(fruits).
+				</p>
+				<p class="lead">For more ideas check section with tips and recommended links.</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <script>
+	$('#placeForAlternatives').hide();
 	//On change check value of select option
 	$('#diet-list-select').change(function() {
 		var valOfSelect = $(this).val();
@@ -182,7 +203,7 @@ $daily_kcal = round($rmr * $user_activity);
 						break;
 					default:
 						multiple = 0;
-						
+
 				}
 				//Add input list group
 				var input = '';
@@ -204,22 +225,23 @@ $daily_kcal = round($rmr * $user_activity);
   <li class="list-group-item">Chicken : ${value.meal3.chicken+(chicken*multiple)}g</li>
   <li class="list-group-item">Boiled potatoes : ${value.meal3.potato+(potatoes*multiple)}g</li>
   <li class="list-group-item">Vegetables : ${value.meal3.vegetables+(vegetables*multiple)}g</li>
-  <li class="list-group-item list-group-item-success lead">Fourth meal - fruits</li>
+  <li class="list-group-item list-group-item-success lead">Fourth meal - fruits/snacks</li>
   <li class="list-group-item">Whole banana : ${value.meal4.banana+banana}</li>
   <li class="list-group-item list-group-item-success lead">Fifth meal - dinner</li>
   <li class="list-group-item">Quark : ${value.meal5.quark+(quark*multiple)}g</li>
   <li class="list-group-item">Nuts : ${value.meal5.nuts+(nuts*multiple)}g</li>
   <li class="list-group-item">Fruits : ${value.meal5.fruits+(fruits*multiple)}g</li>
 </ul>`;
-				
-				$("#placeForDiet").children().hide('fade', 200, function(){
+
+				$("#placeForDiet").children().hide('fade', 200, function() {
 					$("#placeForDiet").html(input);
 					$("#placeForDiet").children().show('fade', 200);
 				});
-				
-				
 			});
 		});
+		if(!$('#placeForAlternatives').is(":visible")){
+			$('#placeForAlternatives').show('fade', 200);
+		}
 	});
 
 </script>

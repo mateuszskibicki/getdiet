@@ -16,9 +16,7 @@
     @include media-md {
       font-size: 1.5em;
     }
-    @include media-lg {
-      font-size: 2em;
-    }
+
   }
   .text-stronger {
     font-size: 1em;
@@ -28,9 +26,6 @@
     font-size: 1em;
     @include media-md {
       font-size: 1.5em;
-    }
-    @include media-lg {
-      font-size: 2em;
     }
   }
 }

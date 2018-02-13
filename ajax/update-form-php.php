@@ -1,15 +1,6 @@
 <?php
 include '../inc/sessions.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $host     = "localhost";
-    $user     = "root";
-    $password = "root";
-    $dbname   = "getdiet";
-    $dsn      = 'mysql:host=' . $host . ';dbname=' . $dbname;
-    /*conn*/
-    $conn     = new PDO($dsn, $user, $password);
-    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); //wole assoc niz obj
-    $conn->exec("SET CHARACTER SET utf8");
     if ($_POST['password'] == '' || $_POST['sex'] == '' || $_POST['age'] == '' || $_POST['weight'] == '' || $_POST['height'] == '' || $_POST['activity_factor'] == '') {
         $alert = 'Fill all fields';
         echo $alert;
@@ -86,18 +77,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // if true >> PDO insert
         // -------
         if (isset($register_password) && isset($register_sex) && isset($register_age) && isset($register_weight) && isset($register_height) && isset($register_activity_factor)) {
+			include('../inc/conf.php');//ASSOC not OBJ
             $id   = $_SESSION['id'];
             $sql  = "
-      UPDATE userinfo
-        SET 
-        password = :password,
-        sex = :sex,
-        age = :age,
-        weight = :weight,
-        height = :height,
-        activity_factor = :activity_factor
-      WHERE id = :id";
-            $stmt = $conn->prepare($sql);
+					  UPDATE userinfo
+						SET 
+						password = :password,
+						sex = :sex,
+						age = :age,
+						weight = :weight,
+						height = :height,
+						activity_factor = :activity_factor
+					  WHERE id = :id";
+            $stmt = $pdo->prepare($sql);
             $stmt->bindValue(":password", $register_password);
             $stmt->bindValue(":sex", $register_sex);
             $stmt->bindValue(":age", $register_age);
@@ -106,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->bindValue(":activity_factor", $register_activity_factor);
             $stmt->bindValue(":id", $id);
             $stmt->execute();
-            $alert = 'ok';
+            $alert = 'Updated, login again.';
             echo $alert;
             return session_destroy();
             return header('Location: login.php');

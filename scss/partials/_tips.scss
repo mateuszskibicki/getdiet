@@ -1,0 +1,21 @@
+#tips {
+	font-family: $font-raleway;
+	.btn-link {
+		background: #76b852;
+		color: $whitesmoke;
+		font-size: 1.2em;
+		text-align: center;
+		box-shadow: 2px 2px 4px gray;
+		transition: 0.3s;
+		&:hover {
+			background: darken(#76b852, 30%);
+		}
+	}
+}
+
+.modal {
+	p {
+		font-family: $font-raleway;
+		font-size: 1.1em;
+	}
+}

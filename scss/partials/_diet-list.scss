@@ -16,4 +16,13 @@
 			font-size: 1.4em;
 		}
 	}
+	p {
+		font-size: 1em;
+		@include media-sm {
+			font-size: 1.3em;
+		}
+		@include media-md {
+			font-size: 1.5em;
+		}
+	}
 }
