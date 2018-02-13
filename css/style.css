@@ -1,5 +1,6 @@
 html,
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
   max-width: 1900px;
@@ -11,8 +12,14 @@ body {
 
 #welcome-left {
   height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 1.5em;
   color: #f5f5f5;
@@ -20,8 +27,8 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
   background: #76b852;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
   /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#8DC26F), to(#76b852));
   background: linear-gradient(to right, #8DC26F, #76b852);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
   #welcome-left img {
@@ -31,6 +38,7 @@ body {
   #welcome-left p {
     padding: 1px;
     margin: 0px;
+    -webkit-transition: 0.5s;
     transition: 0.5s; }
   @media (min-width: 576px) {
     #welcome-left {
@@ -50,8 +58,14 @@ body {
   background: url("../img/login-right.jpg");
   background-position: center;
   background-size: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
   #welcome-right p {
     font-size: 1.8em;
@@ -70,8 +84,10 @@ body {
     margin: 5px;
     border-radius: 0px;
     border: 1px #76b852 solid;
+    -webkit-transition: 0.5s;
     transition: 0.5s; }
     #welcome-right .btn:hover {
+      -webkit-transform: scale(1.1);
       transform: scale(1.1); }
     @media (min-width: 768px) {
       #welcome-right .btn {
@@ -83,10 +99,12 @@ body {
   #welcome-right .btn-register {
     color: #76b852;
     background-color: whitesmoke;
+    -webkit-box-shadow: 0px 5px 5px rgba(128, 128, 128, 0.5);
     box-shadow: 0px 5px 5px rgba(128, 128, 128, 0.5); }
   #welcome-right .btn-login {
     color: #f5f5f5;
     background-color: #76b852;
+    -webkit-box-shadow: 0px 5px 5px rgba(128, 128, 128, 0.5);
     box-shadow: 0px 5px 5px rgba(128, 128, 128, 0.5); }
   @media (min-width: 576px) {
     #welcome-right {
@@ -95,13 +113,19 @@ body {
 #login {
   background: #76b852;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #c6e0b7, #afd69a);
+  background: -webkit-gradient(linear, left top, right top, from(#c6e0b7), to(#afd69a));
   background: linear-gradient(to right, #c6e0b7, #afd69a);
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
   color: #212529;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 0.9em; }
   #login h1 {
@@ -111,7 +135,9 @@ body {
     color: #f5f5f5;
     font-size: 1.5em;
     text-align: center;
+    -webkit-box-shadow: 2px 2px 4px gray;
     box-shadow: 2px 2px 4px gray;
+    -webkit-transition: 0.3s;
     transition: 0.3s; }
     #login .btn-login:hover {
       background: #325021; }
@@ -120,20 +146,32 @@ body {
         margin: 6px;
         font-size: 1.8em; } }
   #login .right-login {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
 
 #register {
   background: #76b852;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #c6e0b7, #afd69a);
+  background: -webkit-gradient(linear, left top, right top, from(#c6e0b7), to(#afd69a));
   background: linear-gradient(to right, #c6e0b7, #afd69a);
   font-family: "Raleway", sans-serif;
   padding: 10px;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
   #register p {
     font-size: 2em; }
@@ -142,7 +180,9 @@ body {
     color: #f5f5f5;
     font-size: 1.5em;
     text-align: center;
+    -webkit-box-shadow: 2px 2px 4px gray;
     box-shadow: 2px 2px 4px gray;
+    -webkit-transition: 0.3s;
     transition: 0.3s; }
     #register .btn-register:hover {
       background: #325021; }
@@ -158,9 +198,10 @@ body {
 
 #nav-top {
   background: #76b852;
-  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  background: -webkit-gradient(linear, left top, right top, from(#8DC26F), to(#76b852));
   background: linear-gradient(to right, #8DC26F, #76b852);
   height: 58px;
+  -webkit-box-shadow: 0px 2px 5px gray;
   box-shadow: 0px 2px 5px gray;
   max-width: 1900px;
   position: fixed;
@@ -175,8 +216,10 @@ body {
     font-size: 2em;
     font-weight: 600;
     cursor: pointer;
+    -webkit-transition: 0.5s;
     transition: 0.5s; }
     #nav-top a:hover {
+      -webkit-transform: scale(1.1) translateX(10px);
       transform: scale(1.1) translateX(10px); }
   #nav-top #logo-carrot {
     width: 50px; }
@@ -186,13 +229,21 @@ body {
       #nav-top svg {
         font-size: 2em; } }
   #nav-top .nav-top-button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-left: 15px;
     cursor: pointer;
+    -webkit-transition: 0.5s;
     transition: 0.5s; }
     #nav-top .nav-top-button-container:hover {
+      -webkit-transform: scale(1.2);
       transform: scale(1.2); }
     @media (min-width: 768px) {
       #nav-top .nav-top-button-container {
@@ -201,8 +252,14 @@ body {
 #nav-top-secondary {
   width: 100%;
   margin-top: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   cursor: pointer; }
   #nav-top-secondary .nav-left-button-container {
@@ -212,7 +269,9 @@ body {
     text-align: center;
     margin: 4px;
     width: 100%;
+    -webkit-box-shadow: 2px 2px 4px gray;
     box-shadow: 2px 2px 4px gray;
+    -webkit-transition: 0.3s;
     transition: 0.3s; }
     #nav-top-secondary .nav-left-button-container:hover {
       background: #325021; }
@@ -291,18 +350,26 @@ body {
     width: 42px;
     height: 42px;
     background-color: #212529;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: fixed;
     right: 20px;
     bottom: 0px;
     cursor: pointer; }
     #footer #footer-button .button-rotate {
+      -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
     @media (min-width: 1200px) {
       #footer #footer-button {
         right: 50%;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%); } }
 
 #calc-bmi {
@@ -348,7 +415,9 @@ body {
     color: #f5f5f5;
     font-size: 1.2em;
     text-align: center;
+    -webkit-box-shadow: 2px 2px 4px gray;
     box-shadow: 2px 2px 4px gray;
+    -webkit-transition: 0.3s;
     transition: 0.3s; }
     #profile-page .profile-update-button:hover {
       background: #325021; }
@@ -387,7 +456,9 @@ body {
     color: #f5f5f5;
     font-size: 1.2em;
     text-align: center;
+    -webkit-box-shadow: 2px 2px 4px gray;
     box-shadow: 2px 2px 4px gray;
+    -webkit-transition: 0.3s;
     transition: 0.3s; }
     #tips .btn-link:hover {
       background: #325021; }
@@ -395,5 +466,3 @@ body {
 .modal p {
   font-family: "Raleway", sans-serif;
   font-size: 1.1em; }
-
-/*# sourceMappingURL=style.css.map */
